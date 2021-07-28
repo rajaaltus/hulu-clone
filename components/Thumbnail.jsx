@@ -31,4 +31,5 @@ const Thumbnail = forwardRef(({ result }) => {
   );
 });
 
+Thumbnail.displayName = "Thumbnail";
 export default Thumbnail;
