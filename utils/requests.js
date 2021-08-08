@@ -1,48 +1,67 @@
-const API_KEY = process.env.API_KEY;
+// import axios from 'axios'
+// axios.defaults.baseURL = "https://yts.mx/api/v2"
+const suffix = '&sort_by=date_added&limit=50'
 
+/* eslint import/no-anonymous-default-export: [2, {"allowObject": true}] */
 export default {
-  fetchTrending: {
-    title: 'Trending',
-    url: `/trending/all/week?api_key=${API_KEY}&language=en_us`
-  },
-  fetchTopRated: {
-    title: 'Top Rated',
-    url: `/movie/top_rated?api_key=${API_KEY}&language=en_us`
-  },
-  fetchActionMovies: {
-    title: 'Action',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=28`
-  },
-  fetchComedyMovies: {
+  fetchComedy: {
     title: 'Comedy',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=35`
+    url: `/list_movies.json?genre=comedy${suffix}`
   },
-  fetchHorrorMovies: {
+  fetchScifi: {
+    title: 'Sci-fi',
+    url: `/list_movies.json?genre=sci-fi${suffix}`
+  },
+  fetchHorror: {
     title: 'Horror',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=27`
+    url: `/list_movies.json?genre=horror${suffix}`
+  },
+  fetchRomance: {
+    title: 'Romance',
+    url: `/list_movies.json?genre=romance${suffix}`
+  },
+  fetchAction: {
+    title: 'Action',
+    url: `/list_movies.json?genre=action${suffix}`
   },
   fetchRomanceMovies: {
-    title: 'Romance',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=10749`
+    title: 'Thriller',
+    url: `/list_movies.json?genre=thriller${suffix}`
+  },
+  fetchDrama: {
+    title: 'Drama',
+    url: `/list_movies.json?genre=drama${suffix}`
   },
   fetchMystery: {
     title: 'Mystery',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=9648`
+    url: `/list_movies.json?genre=mystery${suffix}`
   },
-  fetchSciFi: {
-    title: 'Sci-Fi',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=878`
-  },
-  fetchWestern: {
-    title: 'Western',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=37`
+  fetchCrime: {
+    title: 'Crime',
+    url: `/list_movies.json?genre=crime${suffix}`
   },
   fetchAnimation: {
     title: 'Animation',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=16`
+    url: `/list_movies.json?genre=animation${suffix}`
   },
-  fetchTV: {
-    title: 'TV Movie',
-    url: `/discover/movie?api_key=${API_KEY}&with_genres=10770`
+  fetchAdventure: {
+    title: 'Adventure',
+    url: `/list_movies.json?genre=adventure${suffix}`
+  },
+  fetchFantasy: {
+    title: 'Fantasy',
+    url: `/list_movies.json?genre=fantasy${suffix}`
+  },
+  fetchComedyRomance: {
+    title: 'Comedy-Romance',
+    url: `/list_movies.json?genre=comedy-romance${suffix}`
+  },
+  fetchActionComedy: {
+    title: 'Action-Comedy',
+    url: `/list_movies.json?genre=action-comedy${suffix}`
+  },
+  fetchSuperhero: {
+    title: 'Superhero',
+    url: `/list_movies.json?genre=superhero${suffix}`
   },
 };

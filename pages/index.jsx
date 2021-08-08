@@ -27,13 +27,11 @@ export async function getServerSideProps(context) {
   const genre = context.query.genre;
 
   const request = await fetch(
-    `https://api.themoviedb.org/3${
-      requests[genre]?.url || requests.fetchTrending.url
-    }`
+    `https://yts.mx/api/v2${requests[genre]?.url || requests.fetchAction.url}`
   ).then((res) => res.json());
   return {
     props: {
-      results: request.results,
+      results: request.data.movies,
     },
   };
 }

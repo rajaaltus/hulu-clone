@@ -12,12 +12,12 @@ const Header = () => {
   return (
     <header className="flex flex-col sm:flex-row m-5 items-center justify-between h-auto">
       <div className="flex flex-grow justify-evenly max-w-2xl">
-        <HeaderItem Icon={HomeIcon} title={"HOME"} />
-        <HeaderItem Icon={LightningBoltIcon} title={"TRENDING"} />
-        <HeaderItem Icon={BadgeCheckIcon} title={"VERFIFIED"} />
-        <HeaderItem Icon={CollectionIcon} title={"COLLECTIONS"} />
-        <HeaderItem Icon={SearchIcon} title={"SEARCH"} />
-        <HeaderItem Icon={UserIcon} title={"ACCOUNT"} />
+        <HeaderItem Icon={HomeIcon} title={"HOME"} link={"/"} />
+        <HeaderItem Icon={LightningBoltIcon} title={"TRENDING"} link={"/"} />
+        <HeaderItem Icon={BadgeCheckIcon} title={"VERFIFIED"} link={"/"} />
+        <HeaderItem Icon={CollectionIcon} title={"COLLECTIONS"} link={"/"} />
+        <HeaderItem Icon={SearchIcon} title={"SEARCH"} link={"/"} />
+        <HeaderItem Icon={UserIcon} title={"ACCOUNT"} link={"/"} />
       </div>
       <Image
         className="object-contain"
