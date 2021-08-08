@@ -24,7 +24,7 @@ export default {
     title: 'Action',
     url: `/list_movies.json?genre=action${suffix}`
   },
-  fetchRomanceMovies: {
+  fetchThriller: {
     title: 'Thriller',
     url: `/list_movies.json?genre=thriller${suffix}`
   },

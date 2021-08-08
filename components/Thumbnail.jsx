@@ -4,13 +4,15 @@ import { ThumbUpIcon } from "@heroicons/react/outline";
 
 const Thumbnail = forwardRef(({ result }) => {
   return (
-    <div className="group p-2 cursor-pointer transition duration-200 ease-in transform sm:hover:scale-105 hover:z-50">
+    <div className="p-2 group cursor-pointer transition duration-200 ease-in transform  sm:hover:scale-105 hover:z-50">
       <Image
         alt={result.title}
-        src={result.medium_cover_image}
+        src={result.large_cover_image}
         layout="responsive"
-        height={345}
-        width={230}
+        width={500}
+        height={750}
+        placeholder="blur"
+        blurDataURL={result.small_cover_image}
         className="object-cover"
       />
       <div className="p-2">
