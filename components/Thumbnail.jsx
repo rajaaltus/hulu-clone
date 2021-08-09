@@ -1,8 +1,12 @@
 import React, { forwardRef } from "react";
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
-
+import { useRouter } from "next/router";
 const Thumbnail = forwardRef(({ result }) => {
+  const router = useRouter();
+  const clickHandler = () => {
+    router.push(`/${result.id}`);
+  };
   return (
     <div className="p-2 group cursor-pointer transition duration-200 ease-in transform  sm:hover:scale-105 hover:z-50">
       <Image
@@ -14,6 +18,7 @@ const Thumbnail = forwardRef(({ result }) => {
         placeholder="blur"
         blurDataURL={result.small_cover_image}
         className="object-cover"
+        onClick={clickHandler}
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.description_full}</p>

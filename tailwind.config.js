@@ -12,6 +12,7 @@ module.exports = {
   variants: {
     extend: {
       animation: ['hover', 'focus', 'group-hover'],
+      translate: ['hover']
     },
   },
   plugins: [require('tailwind-scrollbar-hide')],
