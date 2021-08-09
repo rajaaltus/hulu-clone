@@ -6,8 +6,8 @@ import YouTube from "react-youtube";
 
 const MovieDetails = ({ result }) => {
   return (
-    <div className="p-2 m-10 max-w-4xl  mx-auto">
-      <div className="flex items-start justify-betweeen">
+    <div className="p-2 m-10 max-w-4xl mx-auto">
+      <div className="w-full lg:flex items-start justify-betweeen">
         <div className="mr-8 w-full">
           <Image
             alt={result.movie.title}
