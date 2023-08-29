@@ -11,6 +11,7 @@ export default function Home({ results }) {
   useEffect(() => {
     setMoreResults(results);
   }, [results]);
+  console.log("Genre: ", requests["fetchHorror"]?.url);
   return (
     <div>
       <Head>

@@ -2,7 +2,8 @@ import React, { forwardRef } from "react";
 import Image from "next/image";
 import { ThumbUpIcon } from "@heroicons/react/outline";
 import { useRouter } from "next/router";
-const Thumbnail = forwardRef(({ result }) => {
+
+const Thumbnail = forwardRef(({ result }, ref) => {
   const router = useRouter();
   const clickHandler = () => {
     router.push(`/${result.id}`);
@@ -19,6 +20,7 @@ const Thumbnail = forwardRef(({ result }) => {
         blurDataURL={result.small_cover_image}
         className="object-cover"
         onClick={clickHandler}
+        ref={ref}
       />
       <div className="p-2">
         <p className="truncate max-w-md">{result.description_full}</p>
